@@ -15,7 +15,7 @@ FOREIGN KEY (agreementid) REFERENCES shipping_agreement(agreementid) ON UPDATE C
 INSERT INTO shipping_info(shippingid, vendorid, payment_amount, shipping_plan_datetime, transfer_type_id, shipping_country_id, agreementid)
     
 WITH shipping_join AS(
-SELECT 
+SELECT DISTINCT
 	shippingid,
     vendorid,
     payment_amount,
